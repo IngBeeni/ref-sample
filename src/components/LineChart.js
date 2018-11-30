@@ -3,7 +3,6 @@ import Chart from "chart.js";
 import "./LineChart.css";
 
 class LineChart extends Component {
-
   chart = null;
 
   draw() {
@@ -12,7 +11,7 @@ class LineChart extends Component {
       this.chart.destroy();
       this.chart = null;
     }
-    
+
     const { data, pair } = this.props;
 
     const config = {
@@ -24,10 +23,10 @@ class LineChart extends Component {
             label: "price",
             data: data.map(d => d.value),
             fill: false,
-            backgroundColor: 'blue',
-            borderColor: 'blue',
+            backgroundColor: "blue",
+            borderColor: "blue",
             lineTension: 0,
-            pointRadius: 0,
+            pointRadius: 0
           }
         ]
       },
@@ -68,7 +67,6 @@ class LineChart extends Component {
       this.chart.destroy();
     }
   }
-  
 
   render() {
     return (
